@@ -206,7 +206,6 @@ class cardForProduct extends HTMLElement{
                 
                 .product__card{
                     display: flex;
-                    max-width: 1200px;
                     align-items: center;
                     padding: 0 75px;
                 }
@@ -262,8 +261,21 @@ class cardForProduct extends HTMLElement{
                 }
             }
             @media (min-width: 1024px){
+
+                .product__card{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 75px;
+                    width: 100%
+                }
                 
                 /* Primera Sección */
+
+                .product__card-visual{
+                    max-width: 500px;
+                    height: 80%;
+                }
+                
 
                 .product__card-visual--title{
                     font-size: 15rem;
@@ -274,6 +286,12 @@ class cardForProduct extends HTMLElement{
                 }
 
                 /* Segunda Sección */
+
+                .product__card-info{
+                    max-width: 500px;
+                    height: 80%;
+                    padding: 0 15px 0 35px;
+                }
 
                 .product__card-info{
                     padding: 35px;
