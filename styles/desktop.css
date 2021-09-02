@@ -1,0 +1,29 @@
+
+/* Primera Sección */
+
+
+.product__card-visual--title{
+    font-size: 15rem;
+}
+
+.product__card-visual--img{
+    height: 500px;
+}
+
+/* Segunda Sección */
+
+.product__card-info{
+    padding: 35px;
+}
+
+.product__card-info-container--title{
+    margin-top: 50px;
+}
+
+.product__card-info-container--description{
+    font-size: 1.6rem;
+}
+
+
+
+
