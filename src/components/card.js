@@ -12,9 +12,21 @@ class cardForProduct extends HTMLElement{
         this.price = this.getAttribute("price")       
     
     }
+
+    static get observedAttributes(){
+        return ["brand", "img-src", "img-alt", "title", "category", "subtitle", "description", "price"]
+    }   //Aqui damos de alta las variables en este observador
+
+    attributeChangedCallback(attribute, old, newVal){
+        if(old !== newVal){
+            this[attribute] = newVal
+        }
+    }
+
+
     getTemplate(){
         const cardTemplate = document.createElement("template")
-        cardTemplate.innerHTML = `
+        cardTemplate.innerHTML = /*html*/`
         <div class="product__card">
         <div class="product__card-visual">
             <h1 class="product__card-visual--title">${this.brand}</h1>
@@ -41,7 +53,7 @@ class cardForProduct extends HTMLElement{
     }
 
     getStyles(){
-        return`
+        return/*CSS*/`
         <style>
             :host{
                 --primary-background-color: #4854a0;
